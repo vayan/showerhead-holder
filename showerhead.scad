@@ -12,13 +12,6 @@ dist_screw  = 5;
 dist        = 10;
 d           = 17 +  dia_bottom + dist;
 
-module hole() {
-    rotate([0,90,0]) union() {
-        translate([0,0,14]) cylinder(h=30,  r=dia_crew1/2, center=true);
-        translate([0,0,15+dist_screw]) cylinder(h=30,  r=dia_crew2/2, center=true);
-    }
-}
-
 module main(){
     difference() {
         translate([0,-w/2,0]) cube(size=[d,w,h]);
@@ -31,10 +24,10 @@ module main(){
     }
     
     difference() {
-        rotate([0,70,0]) translate([-30,0, -11]) cylinder(h=60, r1=15/2, r2=25/2, center=true);
-        rotate([90,0,0]) translate([-35,20,0]) cylinder(h=30,  r=dia_crew2/2, center=true);
+        rotate([0,70,0]) translate([-35,0, -11]) cylinder(h=70, r1=15/2, r2=25/2, center=true);
+        rotate([90,0,0]) translate([-46,20,0]) cylinder(h=30,  r=dia_crew2/2, center=true);
     }
-    translate([20,30,+15]) cylinder(h=30,  r=dia_crew2/2.1, center=true);
+    translate([20,30,+19]) cylinder(h=39,  r=dia_crew2/2.3, center=true);
 }
 
 main();
