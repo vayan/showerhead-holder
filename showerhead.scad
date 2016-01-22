@@ -28,6 +28,7 @@ module main(){
         rotate([90,0,0]) translate([-46,20,0]) cylinder(h=30,  r=dia_crew2/2, center=true);
     }
     translate([20,30,+19]) cylinder(h=39,  r=dia_crew2/2.3, center=true);
+    translate([20,30,2]) cylinder(h=5,  r=dia_crew2/1.1, center=true);
 }
 
 main();
